@@ -1,0 +1,28 @@
+.montages__advantages__box {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 48px;
+}
+
+.montages__advantages__box1,
+.montages__advantages__box2,
+.montages__advantages__box3,
+.montages__advantages__box4 {
+    display: flex;
+    column-gap: 8px;
+    border: 2px solid #EFF0F2;
+    border-radius: 16px;
+    padding: 24px;
+    width: 302px;
+    height: 96px;    
+}
+
+.montages__advantages__box1__text,
+.montages__advantages__box2__text,
+.montages__advantages__box3__text,
+.montages__advantages__box4__text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;   
+}

@@ -1,0 +1,20 @@
+.contact__company {
+    padding-bottom: 48px;
+}
+
+.contact__company__box {
+    height: 150px;
+    border: 2px solid #EFF0F2;
+    border-radius: 16px;
+    padding: 24px 0 0 30px;
+}
+
+.contact__company__box__name {
+    padding-bottom: 8px;
+}
+
+.contact__company__box__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}

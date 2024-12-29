@@ -1,0 +1,179 @@
+.popular {
+    padding-bottom: 72px;
+}
+
+.popular__name{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    padding-bottom: 24px;    
+}
+
+.popular__btns {
+    display: flex;
+    column-gap: 16px;
+}
+
+.popular__btn1 {
+    border: 2px solid #F7752A;
+    border-radius: 28px;
+    background: none;
+    width: 190px;
+    height: 48px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #F7752A;
+    cursor: pointer;
+}
+
+.popular__btn1-1 {
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    width: 190px;
+    height: 48px;
+    border-radius: 28px;
+    background-color: #F7752A;
+    color: white;
+    cursor: pointer;
+}
+
+.popular__btn2 {
+    border: 2px solid #F7752A;
+    border-radius: 28px;
+    background: none;
+    width: 97px;
+    height: 48px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #F7752A;
+    cursor: pointer;
+}
+
+.popular__btn2-2 {
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    width: 97px;
+    height: 48px;
+    border-radius: 28px;
+    background-color: #F7752A;
+    color: white;
+    cursor: pointer;
+}
+
+.popular__btn3 {
+    border: 2px solid #F7752A;
+    border-radius: 28px;
+    background: none;
+    width: 111px;
+    height: 48px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #F7752A;
+    cursor: pointer;
+}
+
+.popular__btn3-3 {
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    width: 111px;
+    height: 48px;
+    border-radius: 28px;
+    background-color: #F7752A;
+    color: white;
+    cursor: pointer;
+}
+
+.popular__btn4 {
+    border: 2px solid #F7752A;
+    border-radius: 28px;
+    background: none;
+    width: 181px;
+    height: 48px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #F7752A;
+    cursor: pointer;
+}
+
+.popular__btn4-4 {
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    width: 181px;
+    height: 48px;
+    border-radius: 28px;
+    background-color: #F7752A;
+    color: white;
+    cursor: pointer;
+}
+
+.popular__btn5 {
+    border: 2px solid #F7752A;
+    border-radius: 28px;
+    background: none;
+    width: 219px;
+    height: 48px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #F7752A;
+    cursor: pointer;
+}
+
+.popular__btn5-5 {
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    width: 219px;
+    height: 48px;
+    border-radius: 28px;
+    background-color: #F7752A;
+    color: white;
+    cursor: pointer;
+}
+
+.popular__btn1:hover,
+.popular__btn2:hover,
+.popular__btn3:hover,
+.popular__btn4:hover,
+.popular__btn5:hover {
+    background-color: #F7752A;
+    color: white;
+    transition: .3s;
+}
+
+.popular__swiper__box {
+    padding-top: 24px;
+}

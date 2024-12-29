@@ -1,0 +1,603 @@
+
+
+.stovesa__and__freplaces__panel__box {
+    display: flex;
+    column-gap: 997px;
+    border: 2px solid #EFF0F2;
+    border-radius: 24px;
+    width: 1280px;
+    height: 80px;
+    margin-bottom: 32px;
+}
+
+.stovesa__and__freplaces__panel__box__img {
+    display: flex;
+    column-gap: 10px;
+    padding-left: 16px;
+    padding-top: 15px;
+}
+
+.stovesa__and__freplaces__panel__box__img1 {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #dddddd;
+    border-radius: 24px;
+    padding-top: 16px;
+    padding-left: 16px;
+    transition: all .4s ease;
+}
+
+.stovesa__and__freplaces__panel__box__img1--1 {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #43c16d;
+    box-shadow: 0px 0px 2px 1px #7cce98;
+    border-radius: 24px;
+    padding-top: 16px;
+    padding-left: 16px;
+    transition: all .3s ease;
+}
+
+.stovesa__and__freplaces__panel__box__img1:hover {
+    border: 1px solid #43c16d;
+}
+
+.stovesa__and__freplaces__panel__box__img2 {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #dddddd;
+    border-radius: 24px;
+    padding-top: 16px;
+    padding-left: 16px;
+    transition: all .4s ease;
+}
+
+.stovesa__and__freplaces__panel__box__img2--2 {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #43c16d;
+    box-shadow: 0px 0px 2px 1px #7cce98;
+    border-radius: 24px;
+    padding-top: 16px;
+    padding-left: 16px;
+    transition: all .3s ease;
+}
+
+.stovesa__and__freplaces__panel__box__img2:hover {
+    border: 1px solid #43c16d;
+}
+
+.stovesa__and__freplaces__panel__box__popup {
+    padding-top: 30px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    color: #61707D;
+    position: relative;
+}
+
+.stovesa__and__freplaces__panel__box__popup::after {
+    content: '';
+    position: absolute;
+    background-image: url(../StovesaAndFreplacesIMG/viewBox3.svg);
+    width: 8px;
+    height: 5px;
+    top: 37px;
+    left: 112px;
+}
+
+.stovesa__and__freplaces__carts__box {
+    display: flex;
+    column-gap: 24px;
+}
+
+.stovesa__and__freplaces__carts__aside {
+    width: 302px;
+    height: 1027px;
+}
+
+.stovesa__and__freplaces__carts__aside__name {
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0.01em;
+    color: #61707D;    
+    padding-top: 8px;
+    padding-bottom: 16px;
+}
+
+.stovesa__and__freplaces__carts__aside__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.stovesa__and__freplaces__carts__aside__form__inputs {
+    display: flex;
+    column-gap: 16px;
+    padding-bottom: 16px;
+}
+
+.stovesa__and__freplaces__carts__aside__form__input3 {
+    color: #F7752A;
+}
+
+.stovesa__and__freplaces__carts__aside__form__input1 {
+    border: 2px solid #DFE2E5;
+    border-radius: 28px;
+    padding: 9px 0px;
+    width: 135px;
+    height: 56px;  
+    outline: none;  
+    padding-left: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.stovesa__and__freplaces__carts__aside__form__input2 {
+    border: 2px solid #DFE2E5;
+    border-radius: 28px;
+    padding: 9px 0px;
+    width: 135px;
+    height: 56px;  
+    outline: none; 
+    padding-left: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%; 
+}
+
+.stovesa__and__freplaces__carts__aside__box__line {
+    border: 1px solid #DFE2E5;
+    width: 286px;
+    height: 1px;
+    margin: 20px 0 20px;
+}
+
+.stovesa__and__freplaces__carts__aside__btn {
+    border: 1px solid #FC2F1E;
+    background: none;
+    border-radius: 28px;
+    padding: 18px 24px;
+    width: 286px;
+    height: 55px;    
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FC2F1E;
+    transition: all .4s ease;
+}
+
+.stovesa__and__freplaces__carts__aside__btn:hover {
+    background-color: #FC2F1E;
+    color: white;
+}
+
+.stovesa__and__freplaces__carts__box__contant__cart1__img__box {
+    display: flex;
+    column-gap: 24px;
+    justify-content: center;
+}
+
+.stovesa__and__freplaces__carts__box__contant__cart1 {
+    width: 302px;
+    max-height: 450px;
+    border: 2px solid #DFE2E5;
+    border-radius: 24px;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.stovesa__and__freplaces__carts__box__contant__cart1:hover {
+    box-shadow: 0px 0px 8px 4px #DFE2E5;
+    transition: all .4s ease;
+}
+
+.stovesa__and__freplaces__carts__box__contant__cart1__origin {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    color: #61707D;    
+    padding: 8px 0 14px;
+}
+
+.stovesa__and__freplaces__carts__box__contant__cart1__price {
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 114%;  
+    padding-bottom: 18px;  
+}
+
+.stovesa__and__freplaces__carts__box__contant__cart1__btn {
+    width: 267px;
+    height: 44px;
+    border-radius: 24px;
+    border: none;
+    background-color: #F7752A;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all .4s ease;
+}
+
+.stovesa__and__freplaces__carts__box__contant__cart1__btn:hover {
+    background-color: #F99155;
+}
+
+.stovesa__and__freplaces__carts__box__contant {
+    max-width: 954px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+
+.stovesa__and__freplaces__carts__box__contant-1 {
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+
+.stovesa__and__freplaces__carts__box__contant__cart1-1 {
+    display: flex;
+    width: 954px;
+    max-height: 120px;
+    border: 2px solid #DFE2E5;
+    border-radius: 24px;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.stovesa__and__freplaces__carts__box__contant__cart1-1:hover {
+    box-shadow: 0px 0px 8px 4px #DFE2E5;
+    transition: all .4s ease;
+}
+
+
+.stovesa__and__freplaces__carts__box__contant__cart1-1__img {
+    width: 100%;
+    height: 80%; 
+    object-fit: cover;
+    object-position: top;
+}
+
+.stovesa__and__freplaces__carts__box__contant__cart1-1__title {
+    padding-top: 32px;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.stovesa__and__freplaces__carts__box__contant__cart1-1__title:hover {
+    color: #F7752A;
+    transition: .3s;
+}
+
+.stovesa__and__freplaces__carts__box__contant__cart1-1__price {
+    padding-top: 32px;
+    margin-left: auto;
+    text-align: left;
+}
+
+
+.pagination__box {
+    margin-left: 59%;
+    margin-top: 100px;
+    margin-bottom: 72px;
+}
+
+.pagination__button__products {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #F7752A;
+    border-radius: 20px;
+    background: none ;
+    margin-right: 10px;
+}
+
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------
+
+.stovesa__and__freplaces__carts__aside__box__characteristics1, 
+.stovesa__and__freplaces__carts__aside__box__characteristics2, 
+.stovesa__and__freplaces__carts__aside__box__characteristics3, 
+.stovesa__and__freplaces__carts__aside__box__characteristics4, 
+.stovesa__and__freplaces__carts__aside__box__characteristics5, 
+.stovesa__and__freplaces__carts__aside__box__characteristics6, 
+.stovesa__and__freplaces__carts__aside__box__characteristics7 {
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%; 
+    cursor: pointer;
+}
+
+.stovesa__and__freplaces__carts__aside__box__characteristics1::after, 
+.stovesa__and__freplaces__carts__aside__box__characteristics2::after, 
+.stovesa__and__freplaces__carts__aside__box__characteristics3::after, 
+.stovesa__and__freplaces__carts__aside__box__characteristics4::after, 
+.stovesa__and__freplaces__carts__aside__box__characteristics5::after, 
+.stovesa__and__freplaces__carts__aside__box__characteristics6::after, 
+.stovesa__and__freplaces__carts__aside__box__characteristics7::after {
+    content: '';
+    position: absolute;
+    background-image: url(../StovesaAndFreplacesIMG/hop.svg);
+    width: 11px;
+    height: 7px;
+    top: 10px;
+    left: 85%;
+}
+
+.close__characteristics1,
+.close__characteristics2, 
+.close__characteristics3, 
+.close__characteristics4, 
+.close__characteristics5 {
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0.01em;
+    color: #61707D;    
+    transition: all .2s ease;
+    position: relative;
+}
+
+.close__characteristics1::after, 
+.close__characteristics2::after,
+.close__characteristics3::after, 
+.close__characteristics4::after, 
+.close__characteristics5::after {
+    position: absolute;
+    background-image: url(../StovesaAndFreplacesIMG/hop.svg);
+    width: 11px;
+    height: 7px;
+    top: 11px;
+    left: 85%;
+    transform: scale(-1);
+    transition: all .2s ease;
+}
+
+
+
+.stovesa__and__freplaces__carts__aside__box__characteristics1__in1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.stovesa__and__freplaces__carts__aside__box__characteristics1__in2 {
+    padding-bottom: 20px;
+}
+
+.stovesa__and__freplaces__carts__aside__box__characteristics1__in3 {
+    padding-bottom: 20px;
+}
+
+.stovesa__and__freplaces__carts__aside__box__characteristics1__in4 {
+    padding-bottom: 10px;
+}
+
+.stovesa__and__freplaces__carts__aside__box__characteristics1__in1,
+.stovesa__and__freplaces__carts__aside__box__characteristics1__in2,
+.stovesa__and__freplaces__carts__aside__box__characteristics1__in3,
+.stovesa__and__freplaces__carts__aside__box__characteristics1__in4 {
+    display: flex;
+    column-gap: 16px;
+}
+  
+.stovesa__and__freplaces__carts__aside__box__characteristics1__in1-input,
+.stovesa__and__freplaces__carts__aside__box__characteristics1__in2-input,
+.stovesa__and__freplaces__carts__aside__box__characteristics1__in3-input,
+.stovesa__and__freplaces__carts__aside__box__characteristics1__in4-input {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: none;
+} 
+
+.stovesa__and__freplaces__carts__aside__box__characteristics1__in1-text,
+.stovesa__and__freplaces__carts__aside__box__characteristics1__in2-text,
+.stovesa__and__freplaces__carts__aside__box__characteristics1__in3-text,
+.stovesa__and__freplaces__carts__aside__box__characteristics1__in4-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+// --------------------------------------------------------------------------------------------------------------
+
+.stovesa__and__freplaces__carts__aside__box__characteristics2__in1, 
+.stovesa__and__freplaces__carts__aside__box__characteristics5__in1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.stovesa__and__freplaces__carts__aside__box__characteristics2__in2, 
+.stovesa__and__freplaces__carts__aside__box__characteristics5__in2 {
+    padding-bottom: 10px;
+}
+
+.stovesa__and__freplaces__carts__aside__box__characteristics2__in1,
+.stovesa__and__freplaces__carts__aside__box__characteristics2__in2, 
+.stovesa__and__freplaces__carts__aside__box__characteristics5__in1, 
+.stovesa__and__freplaces__carts__aside__box__characteristics5__in2 {
+    display: flex;
+    column-gap: 16px;
+}
+
+.stovesa__and__freplaces__carts__aside__box__characteristics2__in1-input,
+.stovesa__and__freplaces__carts__aside__box__characteristics2__in2-input, 
+.stovesa__and__freplaces__carts__aside__box__characteristics5__in1-input, 
+.stovesa__and__freplaces__carts__aside__box__characteristics5__in2-input {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: none;
+}
+
+.stovesa__and__freplaces__carts__aside__box__characteristics2__in1-text,
+.stovesa__and__freplaces__carts__aside__box__characteristics2__in2-text, 
+.stovesa__and__freplaces__carts__aside__box__characteristics5__in1-text, 
+.stovesa__and__freplaces__carts__aside__box__characteristics5__in2-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+// ---------------------------------------------------------------------------------------------------------
+
+.stovesa__and__freplaces__carts__aside__box__characteristics3__in1, 
+.stovesa__and__freplaces__carts__aside__box__characteristics4__in1 {
+    display: flex;
+    column-gap: 16px;
+}
+
+.stovesa__and__freplaces__carts__aside__box__characteristics3__in1, 
+.stovesa__and__freplaces__carts__aside__box__characteristics4__in1 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.stovesa__and__freplaces__carts__aside__box__characteristics3__in1-input, 
+.stovesa__and__freplaces__carts__aside__box__characteristics4__in1-input {
+  display: none;
+}
+
+.stovesa__and__freplaces__carts__aside__box__characteristics3__in1-text, 
+.stovesa__and__freplaces__carts__aside__box__characteristics4__in1-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+
+
+
+
+.show__basket__add {
+    position: fixed;
+    top: -50px;
+    border-radius: 53px;
+    background-color: white;
+    padding: 24px;
+    width: 1280px;
+    height: 104px;
+    box-shadow: 0px 0px 8px 4px #afb5b8;   
+    z-index: 500;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.5; 
+    transform: translateY(-20px); 
+    transition: opacity 0.4s ease-in-out, transform 0.6s ease-in-out, top 0.6s ease-in-out;
+}
+
+.show__basket__add.basketshow {
+    top: 20px;
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Return to original position */
+    transition: all 0.4s ease-in-out;
+}
+
+
+
+.show__basket__add__text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;    
+}
+
+.show__basket__add__btn {
+    border: 2px solid #F7752A;
+    border-radius: 28px;
+    padding-right: 20px;
+    width: 187px;
+    height: 56px; 
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #F7752A;   
+    background: none;
+    position: relative;
+}
+
+.show__basket__add__btn::after {
+    content: '';
+    position: absolute;
+    background-image: url(../StovesaAndFreplacesIMG/Vector.svg);
+    width: 16px;
+    height: 10px;
+    top: 20px;
+    left: 134px;    
+}
+
+.show__basket__add__btn:hover {
+    border: 2px solid #F99155;
+    color: #F99155;
+    transition: .3s;
+}
+
+
+
+.custom__checkbox,
+.custom__checkbox1,
+.custom__checkbox2,
+.custom__checkbox3,
+.custom__checkbox4 {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background: rgb(242, 237, 237);
+    display: inline-block;
+    position: relative;
+    transition: all .2s ease;
+}
+
+.custom__checkbox:hover, 
+.custom__checkbox1:hover,
+.custom__checkbox2:hover,
+.custom__checkbox3:hover,
+.custom__checkbox4:hover {
+    border: 1px solid #43c16d;
+    border-radius: 4px;
+}
+
+.custom__checkbox::before, 
+.custom__checkbox1::before,
+.custom__checkbox2::before,
+.custom__checkbox3::before,
+.custom__checkbox4::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: url('../StovesaAndFreplacesIMG/icons8-галочка.svg')center/cover no-repeat;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    position: absolute;
+}
+
+.stovesa__and__freplaces__carts__aside__box__characteristics1__in1-input:checked + .custom__checkbox::before, 
+.stovesa__and__freplaces__carts__aside__box__characteristics1__in2-input:checked + .custom__checkbox::before, 
+.stovesa__and__freplaces__carts__aside__box__characteristics1__in3-input:checked + .custom__checkbox::before, 
+.stovesa__and__freplaces__carts__aside__box__characteristics1__in4-input:checked + .custom__checkbox::before, 
+.stovesa__and__freplaces__carts__aside__box__characteristics2__in1-input:checked + .custom__checkbox1::before, 
+.stovesa__and__freplaces__carts__aside__box__characteristics2__in2-input:checked + .custom__checkbox1::before, 
+.stovesa__and__freplaces__carts__aside__box__characteristics3__in1-input:checked + .custom__checkbox2::before, 
+.stovesa__and__freplaces__carts__aside__box__characteristics4__in1-input:checked + .custom__checkbox3::before, 
+.stovesa__and__freplaces__carts__aside__box__characteristics5__in1-input:checked + .custom__checkbox4::before,
+.stovesa__and__freplaces__carts__aside__box__characteristics5__in2-input:checked + .custom__checkbox4::before,
+.stovesa__and__freplaces__carts__aside__box__characteristics5__in2-input:checked + .custom__checkbox4::before {
+transform: translate(-50%,-50%) scale(1);
+}
+

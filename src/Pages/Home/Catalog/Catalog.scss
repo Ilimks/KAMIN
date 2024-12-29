@@ -1,0 +1,66 @@
+.catalog__name {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    padding-top: 72px;
+    padding-bottom: 32px;
+}
+
+.catalog__box__up {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 32px;
+}
+
+.catalog__box__up__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+}
+
+.catalog__box__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 72px;
+}
+
+.catalog__box__bottom__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+}
+
+.catalog__box__up__1 img,
+.catalog__box__up__2 img,
+.catalog__box__up__3 img,
+.catalog__box__up__4 img,
+.catalog__box__bottom__1 img, 
+.catalog__box__bottom__2 img, 
+.catalog__box__bottom__3 img, 
+.catalog__box__bottom__4 img, 
+.catalog__box__bottom__5 img {
+    border-radius: 24px;
+    transition: all .4s ease;
+}
+
+.catalog__box__up__1 img:hover,
+.catalog__box__up__2 img:hover,
+.catalog__box__up__3 img:hover,
+.catalog__box__up__4 img:hover,
+.catalog__box__bottom__1 img:hover, 
+.catalog__box__bottom__2 img:hover, 
+.catalog__box__bottom__3 img:hover, 
+.catalog__box__bottom__4 img:hover, 
+.catalog__box__bottom__5 img:hover {
+    box-shadow: 0px 0px 9px 7px #DFE2E5;
+}
+
+.catalog__box__mobile {
+    display: none;
+}
+
+.catalog__box__mobile2 {
+    display: none;
+}

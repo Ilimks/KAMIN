@@ -1,0 +1,43 @@
+
+
+.portfolio__name {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    padding-bottom: 32px;
+}
+
+.portfolio__btn {
+    border: 2px solid #F7752A;
+    border-radius: 38px;
+    padding-right: 32px;
+    width: 257px;
+    height: 76px;
+    margin-top: 24px;
+    background: none; 
+    color: #F7752A;  
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase; 
+    position: relative;
+    margin-left: 511px;
+    margin-bottom: 72px;
+}
+
+.portfolio__btn::after {
+    content: '';
+    position: absolute;
+    background-image: url(./PortfolioIMG/Vector.svg);
+    width: 16px;
+    height: 10px;
+    top: 31px;
+    left: 185px;
+}
+
+.portfolio__btn:hover {
+    border: 2px solid #F99155;
+    color: #F99155;
+    transition: .3s;
+}

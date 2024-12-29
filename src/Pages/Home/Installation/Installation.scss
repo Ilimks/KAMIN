@@ -1,0 +1,124 @@
+.installation {
+    padding-bottom: 72px;
+}
+
+.installation__name {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    padding-bottom: 24px;    
+}
+
+.installation__text {
+    width: 600px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    padding-left: 64px;  
+    padding-bottom: 40px; 
+    position: relative;
+}
+
+.installation__text::after {
+    content: '';
+    position: absolute;
+    background-image: url(./InstallationIMG/FrameH.svg);
+    width: 48px;
+    height: 48px;
+    top: 0;
+    left: 0;
+}
+
+.installation__box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.installation__box__card1__des,
+.installation__box__card2__des,
+.installation__box__card3__des,
+.installation__box__card4__des,
+.installation__box__card5__des,
+.installation__box__card6__des {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    padding-left: 56px;
+    padding-top: 8px;
+}
+
+.installation__box__card1__price,
+.installation__box__card2__price,
+.installation__box__card3__price,
+.installation__box__card4__price,
+.installation__box__card5__price,
+.installation__box__card6__price {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #61707D;  
+    padding-left: 56px;  
+    position: relative;
+}
+
+.installation__box__card1__price::after {
+    content: '';
+    position: absolute;
+    background-image: url(./InstallationIMG/install1.svg);
+    width: 48px;
+    height: 48px;
+    top: -25px;
+    left: 0;
+}
+
+.installation__box__card2__price::after {
+    content: '';
+    position: absolute;
+    background-image: url(./InstallationIMG/install1.svg);
+    width: 48px;
+    height: 48px;
+    top: -25px;
+    left: 0;
+}
+
+.installation__box__card3__price::after {
+    content: '';
+    position: absolute;
+    background-image: url(./InstallationIMG/install3.svg);
+    width: 48px;
+    height: 48px;
+    top: -25px;
+    left: 0;
+}
+
+.installation__box__card4__price::after {
+    content: '';
+    position: absolute;
+    background-image: url(./InstallationIMG/install4.svg);
+    width: 48px;
+    height: 48px;
+    top: -25px;
+    left: 0;
+}
+
+.installation__box__card5__price::after {
+    content: '';
+    position: absolute;
+    background-image: url(./InstallationIMG/install5.svg);
+    width: 48px;
+    height: 48px;
+    top: -25px;
+    left: 0;
+}
+
+.installation__box__card6__price::after {
+    content: '';
+    position: absolute;
+    background-image: url(./InstallationIMG/install6.svg);
+    width: 48px;
+    height: 48px;
+    top: -25px;
+    left: 0;
+}

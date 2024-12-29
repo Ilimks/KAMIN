@@ -1,0 +1,71 @@
+.DeliveryGuarantees {
+    margin-bottom: 72px;
+}
+
+.DeliveryGuarantees__name {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    padding-bottom: 24px;  
+}
+
+.DeliveryGuarantees__box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.DeliveryGuarantees__box__left {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+
+.DeliveryGuarantees__box__right{
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.DeliveryGuarantees__box__left1,
+.DeliveryGuarantees__box__left2,
+.DeliveryGuarantees__box__right1,
+.DeliveryGuarantees__box__right2 {
+    border: 2px solid #EFF0F2;
+    border-radius: 24px;
+    padding: 24px;
+    width: 628px;
+    height: auto;    
+}
+
+.DeliveryGuarantees__box__left1__name,
+.DeliveryGuarantees__box__left2__name,
+.DeliveryGuarantees__box__right1__name,
+.DeliveryGuarantees__box__right2__name {
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+    padding-bottom: 16px;    
+}
+
+.DeliveryGuarantees__box__left1__text,
+.DeliveryGuarantees__box__right1__text,
+.DeliveryGuarantees__box__right2__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;    
+}
+
+.DeliveryGuarantees__box__left2__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.DeliveryGuarantees__box__left2__list__li {
+    list-style: disc;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    margin-left: 20px;
+}

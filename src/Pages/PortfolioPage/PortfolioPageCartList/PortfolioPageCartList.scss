@@ -1,0 +1,37 @@
+.portfolio__page__cart__list {
+    padding-bottom: 72px;
+}
+
+.portfolio__page__cart__list__box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.portfolio__page__cart__list__box1__text {
+    width: 250px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;  
+    text-align: center;
+    margin-left: 25px;
+}
+
+.portfolio__page__cart__list__box2__text {
+    width: 180px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;  
+    text-align: center;
+    margin-left: 62px;
+}
+
+.portfolio__page__cart__list__box3__text,
+.portfolio__page__cart__list__box4__text,
+.portfolio__page__cart__list__box5__text, 
+.portfolio__page__cart__list__box6__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;  
+    text-align: center;
+}

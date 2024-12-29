@@ -1,0 +1,112 @@
+.DeliveryDes__box__left1,
+.DeliveryDes__box__left2, 
+.DeliveryDes__box__left3,
+.DeliveryDes__box__right1,
+.DeliveryDes__box__right2 {
+    border: 2px solid #EFF0F2;
+    border-radius: 24px;
+    padding: 24px;
+    width: 628px;
+    height: auto;
+}
+
+.DeliveryDes__box__left1__name,
+.DeliveryDes__box__left2__name,
+.DeliveryDes__box__left3__name,
+.DeliveryDes__box__right1__name,
+.DeliveryDes__box__right2__name {
+    padding-bottom: 16px;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+}
+
+.DeliveryDes__box__left1__prise,
+.DeliveryDes__box__left2__prise,
+.DeliveryDes__box__left3__prise {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    padding-top: 16px;
+}
+
+.DeliveryDes__box__left2_des1,
+.DeliveryDes__box__left2_des2,
+.DeliveryDes__box__left2_des3 {
+    padding-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.DeliveryDes__box__right1__des1,
+.DeliveryDes__box__right1__des3 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.DeliveryDes__box__right1__des2 {
+    padding: 16px 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.DeliveryDes__name {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    padding-top: 32px; 
+    padding-bottom: 24px;   
+}
+
+.DeliveryDes__box__left,
+.DeliveryDes__box__right {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.DeliveryDes__box__left3__des {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.DeliveryDes__box__left1_des {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.DeliveryDes__box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.DeliveryDes__box__right2__time1 {
+    padding-bottom: 16px;
+}
+
+.DeliveryDes__box__right2__time1__name,
+.DeliveryDes__box__right2__time2__name {
+    padding-bottom: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+}
+
+.DeliveryDes__box__right2__time1__week,
+.DeliveryDes__box__right2__time2__week {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    width: 198px;
+}
+
+.DeliveryDes {
+    padding-bottom: 72px;
+}

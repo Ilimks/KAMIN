@@ -1,0 +1,74 @@
+.consultation__box {
+    margin-left: 25.5%;
+    border: 2px solid #F7752A;
+    border-radius: 24px;
+    padding: 24px;
+    width: 628px;
+    height: 438px;  
+    margin-bottom: 72px;  
+}
+
+.consultation__box__name {
+    font-weight: 700;
+    font-size: 39px;
+    line-height: 120%;
+    color: #F7752A;
+}
+
+.consultation__box__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    padding-left: 94px;    
+    padding-top: 39px;
+    padding-bottom: 39px;
+    position: relative;
+}
+
+.consultation__box__text::after {
+    content: '';
+    position: absolute;
+    background-image: url(./ConsultationIMG/Ellipse.svg);
+    width: 78px;
+    height: 78px;
+    top: 24px;
+    left: 0;
+}
+
+.consultation__box__form__in1,
+.consultation__box__form__in2 {
+    border: 2px solid #DFE2E5;
+    border-radius: 38px;
+    padding: 9px 0px;
+    width: 282px;
+    height: 76px;    
+    padding-left: 32px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #61707D;
+}
+
+.consultation__box__form__in1 {
+    margin-right: 12px;
+}
+
+.consultation__box__form__btn {
+    width: 580px;
+    height: 76px;
+    border-radius: 38px;
+    border: none;
+    background-color: #F7752A;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 16px;
+}
+
+.consultation__box__form__btn:hover {
+    background-color: #F99155;
+    transition: .3s;
+}

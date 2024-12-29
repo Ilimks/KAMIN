@@ -1,0 +1,90 @@
+.ReviewsPhotoText__box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.ReviewsPhotoText__box1,
+.ReviewsPhotoText__box2,
+.ReviewsPhotoText__box3 {
+    border: 2px solid #EFF0F2;
+    border-radius: 24px;
+    padding: 24px;
+    width: 628px;
+    height: auto;  
+    display: flex;
+    column-gap: 16px;
+}
+
+.ReviewsPhotoText__box1__review__text,
+.ReviewsPhotoText__box2__review__text,
+.ReviewsPhotoText__box3__review__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.ReviewsPhotoText__box1__review__name, 
+.ReviewsPhotoText__box2__review__name,
+.ReviewsPhotoText__box3__review__name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    padding: 8px 0 24px;    
+}
+
+.ReviewsPhotoText__box1__review__look,
+.ReviewsPhotoText__box2__review__look,
+.ReviewsPhotoText__box3__review__look {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #117FF7;
+    cursor: pointer;
+    position: relative;
+}
+
+.ReviewsPhotoText__box1__review__look::after,
+.ReviewsPhotoText__box2__review__look::after,
+.ReviewsPhotoText__box3__review__look::after {
+    content: '';
+    position: absolute;
+    background-image: url(../ReviewsIMG/ReviewLine.svg);
+    width: 12px;
+    height: 24px;
+    top: 0;
+    right: 326px;
+}
+
+.ReviewsPhotoText__box1__img, 
+.ReviewsPhotoText__box2__img, 
+.ReviewsPhotoText__box3__img {
+    width: 76px;
+    height: 81px;    
+}
+
+.look__btn {
+    background: #F7752A;
+    border-radius: 38px;
+    border: none;
+    width: 252px;
+    height: 76px;    
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: white;
+}
+
+.look__btn:hover {
+    transition: .3s;
+    background-color: #F99155;
+}
+
+.ReviewsPhotoText__box__btn {
+    display: flex;
+    justify-content: center;
+    padding: 72px 0;
+}

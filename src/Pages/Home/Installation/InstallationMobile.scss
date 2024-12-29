@@ -1,0 +1,71 @@
+@media(max-width:900px) {
+    .installation {
+        padding-bottom: 0;
+    }
+    
+    .installation__box {
+        margin-left: 22%;
+    }
+
+    .installation__box__card1__img, 
+    .installation__box__card2__img, 
+    .installation__box__card3__img, 
+    .installation__box__card4__img, 
+    .installation__box__card5__img, 
+    .installation__box__card6__img {
+        width: 100%;
+    }
+}
+
+@media(max-width:667px) {
+    .installation__name {
+        font-size: 32px;
+        padding-bottom: 24px;    
+    }
+
+    .installation__box {
+        margin-left: 0;
+    }
+
+    .installation__text {
+        width: 100%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        padding-left: 64px;  
+        padding-bottom: 24px; 
+        position: relative;
+    }
+
+    .installation__box__card1__img, 
+    .installation__box__card2__img, 
+    .installation__box__card3__img, 
+    .installation__box__card4__img, 
+    .installation__box__card5__img, 
+    .installation__box__card6__img {
+        width: 100%;
+    }
+
+    .installation__text::after {
+        content: '';
+        position: absolute;
+        background-image: url(./InstallationIMG/FrameH.svg);
+        width: 48px;
+        height: 48px;
+        top: 10%;
+        left: 0;
+    }
+
+    .installation__box__card1__img,
+    .installation__box__card2__img,
+    .installation__box__card3__img,
+    .installation__box__card4__img,
+    .installation__box__card5__img,
+    .installation__box__card6__img {
+        width: 100%;
+    }
+
+    .installation {
+        padding-bottom: 0;
+    }
+}

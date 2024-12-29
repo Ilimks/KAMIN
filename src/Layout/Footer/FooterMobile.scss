@@ -1,0 +1,233 @@
+@media(max-width:900px) {
+    .footer__box {
+        flex-direction: column;
+    }
+
+    .footer__left {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 47px;
+    }
+
+    .footer__left__text {
+       text-align: center;
+    }
+
+    .footer__left__nav {
+        margin: 0 auto;
+    }
+
+    .footer__left__nav__li {
+        text-align: center;
+    }
+
+    .footer__center {
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+
+    .footer__center__text {
+        text-align: center;
+    }
+
+    .footer__center__place {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        padding-top: 76px;
+    }
+
+    .footer__center__place__adress__shop {
+        text-align: center;
+    }
+
+    .footer__center__place__adress {
+        text-align: center;
+    }
+
+    .footer__center__place__adress::after {
+        top: -68px;
+        left: 46%;
+    }
+
+    .footer__center__map__ymap {
+        width: 100%;
+    }
+
+    .footer__right {
+        padding-top: 0;
+    }
+
+    .footer__right__telephone,
+    .footer__right__email {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__right__telephone {
+        padding: 68px 0;
+    }
+    
+    .footer__right__email {
+        padding-top: 0;
+    }
+
+    .footer__right__telephone__text,
+    .footer__right__telephone__num,
+    .footer__right__email__text,
+    .footer__right__email__ru {
+        text-align: center;
+    }
+
+    .footer__right__telephone::after {
+        top: 16px;
+        left: 46%;
+    }
+
+    .footer__right__email::after {
+        top: -50px;
+        left: 46%;
+    }
+
+    .footer__right__social__network {
+        justify-content: center;
+        column-gap: 16px;
+        padding-top: 47px;
+        padding-left: 0;
+    }
+
+    .footer__right__text1 {
+        padding-left: 0;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-align: center;
+    }
+    
+    .footer__right__text2 {
+        padding-left: 0;
+        text-align: center;
+        padding-bottom: 47px;
+    }
+
+    .footer__line {
+        width: 100%;
+    }
+}
+
+@media(max-width:667px) {
+    .footer__box {
+        flex-direction: column;
+    }
+
+    .footer__left {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 47px;
+    }
+
+    .footer__left__text {
+       text-align: center;
+    }
+
+    .footer__left__nav {
+        margin: 0 auto;
+    }
+
+    .footer__left__nav__li {
+        text-align: center;
+    }
+
+    .footer__center {
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+
+    .footer__center__text {
+        text-align: center;
+    }
+
+    .footer__center__place {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        padding-top: 76px;
+    }
+
+    .footer__center__place__adress__shop {
+        text-align: center;
+    }
+
+    .footer__center__place__adress {
+        text-align: center;
+    }
+
+    .footer__center__place__adress::after {
+        top: -68px;
+        left: 44%;
+    }
+
+    .footer__center__map__ymap {
+        width: 100%;
+    }
+
+    .footer__right {
+        padding-top: 0;
+    }
+
+    .footer__right__telephone,
+    .footer__right__email {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__right__telephone {
+        padding: 68px 0;
+    }
+    
+    .footer__right__email {
+        padding-top: 0;
+    }
+
+    .footer__right__telephone__text,
+    .footer__right__telephone__num,
+    .footer__right__email__text,
+    .footer__right__email__ru {
+        text-align: center;
+    }
+
+    .footer__right__telephone::after {
+        top: 16px;
+        left: 44%;
+    }
+
+    .footer__right__email::after {
+        top: -50px;
+        left: 44%;
+    }
+
+    .footer__right__social__network {
+        justify-content: center;
+        column-gap: 16px;
+        padding-top: 47px;
+        padding-left: 0;
+    }
+
+    .footer__right__text1 {
+        padding-left: 0;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-align: center;
+    }
+    
+    .footer__right__text2 {
+        padding-left: 0;
+        text-align: center;
+        padding-bottom: 47px;
+    }
+
+    .footer__line {
+        width: 100%;
+    }
+}

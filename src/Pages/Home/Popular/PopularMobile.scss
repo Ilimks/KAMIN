@@ -1,0 +1,26 @@
+@media(max-width:900px){
+    .popular__name {
+        font-weight: 700;
+        font-size: 40px;       
+    }
+
+    .popular__btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}
+
+
+@media(max-width:667px){
+    .popular__name {
+        font-weight: 700;
+        font-size: 32px;        
+    }
+
+    .popular__btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}

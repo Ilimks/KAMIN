@@ -1,0 +1,89 @@
+.contact__details__box {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 48px;
+}
+
+.contact__details__box1,
+.contact__details__box2,
+.contact__details__box3,
+.contact__details__box4 {
+    width: 302px;
+    height: 96px;
+    border: 2px solid #EFF0F2;
+    border-radius: 16px;
+    padding-left: 100px;
+    padding-top: 12px;
+}
+
+.contact__details__box1__name,
+.contact__details__box2__name,
+.contact__details__box3__name,
+.contact__details__box4__name {
+    font-weight: 700;
+    font-size: 18px;
+    position: relative;
+}
+
+
+.contact__details__box2__name::after {
+    content: '';
+    position: absolute;
+    mask: url(../../../Layout/Header/HeaderIMG/MessegeHeader.svg);
+    -webkit-mask:url(../../../Layout/Header/HeaderIMG/MessegeHeader.svg);
+    background-color: #F7752A;
+    width: 48px;
+    height: 48px;
+    top: -10px;
+    left: -60px;
+}
+
+.contact__details__box1__name::after {
+    content: '';
+    position: absolute;
+    mask: url(../../../Layout/Header/HeaderIMG/PhoneHeader.svg);
+    -webkit-mask:url(../../../Layout/Header/HeaderIMG/PhoneHeader.svg);
+    background-color: #F7752A;
+    width: 48px;
+    height: 48px;
+    top: -10px;
+    left: -60px;
+}
+
+.contact__details__box4__name::after {
+    content: '';
+    position: absolute;
+    mask: url(../../../Layout/Header/HeaderIMG/AdressHeader.svg);
+    -webkit-mask:url(../../../Layout/Header/HeaderIMG/AdressHeader.svg);
+    background-color: #F7752A;
+    width: 48px;
+    height: 48px;
+    top: -10px;
+    left: -60px;
+}
+
+.contact__details__box3__name::after {
+    content: '';
+    position: absolute;
+    mask: url(../../../Layout/Header/HeaderIMG/TimeHeader.svg) no-repeat;
+    -webkit-mask:url(../../../Layout/Header/HeaderIMG/TimeHeader.svg) no-repeat;
+    background-color: #F7752A;
+    width: 48px;
+    height: 48px;
+    top: 4px;
+    left: -48px;
+}
+
+.contact__details__box1__text,
+.contact__details__box2__text,
+.contact__details__box3__text,
+.contact__details__box4__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em; 
+}
+
+.contact__details__box2__text a {
+    text-decoration: none;
+}

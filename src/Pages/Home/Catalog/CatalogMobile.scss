@@ -1,0 +1,102 @@
+@media(max-width:900px) {
+    .catalog__name {
+        font-size: 40px;
+        padding-top: 48px;
+        padding-bottom: 24px;
+    }
+
+    .catalog__box__mobile2-1__img, 
+    .catalog__box__mobile2-2__img, 
+    .catalog__box__mobile2-3__img, 
+    .catalog__box__mobile2-4__img, 
+    .catalog__box__mobile2-5__img, 
+    .catalog__box__mobile2-6__img, 
+    .catalog__box__mobile2-7__img, 
+    .catalog__box__mobile2-8__img, 
+    .catalog__box__mobile2-9__img {
+        width: 251px;
+        height: 251px;        
+    }
+
+    .catalog__box__mobile2-1__text,
+    .catalog__box__mobile2-2__text,
+    .catalog__box__mobile2-3__text,
+    .catalog__box__mobile2-4__text,
+    .catalog__box__mobile2-5__text,
+    .catalog__box__mobile2-6__text,
+    .catalog__box__mobile2-7__text,
+    .catalog__box__mobile2-8__text,
+    .catalog__box__mobile2-9__text {
+        text-align: center;
+    }
+
+    .catalog__box__mobile2 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .catalog__box {
+        display: none;
+    }
+   
+}
+
+@media(max-width:667px) {
+    .catalog__name {
+        font-size: 32px;
+        padding-top: 48px;
+        padding-bottom: 24px;
+    }
+
+    .catalog__box__mobile {
+        display: flex;
+    }
+
+    .catalog__box__mobile1__img,
+    .catalog__box__mobile2__img,
+    .catalog__box__mobile3__img,
+    .catalog__box__mobile4__img,
+    .catalog__box__mobile5__img,
+    .catalog__box__mobile6__img,
+    .catalog__box__mobile7__img,
+    .catalog__box__mobile8__img,
+    .catalog__box__mobile9__img {
+        border-radius: 16px;
+        width: 147px;
+        height: 147px;   
+        transition: all .4s ease;     
+    }
+
+    .catalog__box__mobile1__img:hover,
+    .catalog__box__mobile2__img:hover,
+    .catalog__box__mobile3__img:hover,
+    .catalog__box__mobile4__img:hover,
+    .catalog__box__mobile5__img:hover,
+    .catalog__box__mobile6__img:hover,
+    .catalog__box__mobile7__img:hover,
+    .catalog__box__mobile8__img:hover,
+    .catalog__box__mobile9__img:hover {
+        box-shadow: 0px 0px 9px 7px #DFE2E5;
+    }
+
+    .catalog__box__mobile1__text,
+    .catalog__box__mobile2__text,
+    .catalog__box__mobile3__text,
+    .catalog__box__mobile4__text,
+    .catalog__box__mobile5__text,
+    .catalog__box__mobile6__text,
+    .catalog__box__mobile7__text,
+    .catalog__box__mobile8__text,
+    .catalog__box__mobile9__text {
+        text-align: center;
+    }
+
+    .catalog__box {
+        display: none;
+    }
+
+    .catalog__box__mobile2 {
+        display: none;
+    }
+}

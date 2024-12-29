@@ -1,0 +1,36 @@
+.DeliveryTextUp {
+    margin-top: 144px;
+}
+
+.DeliveryTextUp__home {
+    display: flex;
+    column-gap: 39px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
+}
+
+.DeliveryTextUp__home__name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    color: #61707D;   
+    padding-top: 4px;
+}
+
+.DeliveryTextUp__home__name::before {
+    content: '';
+    position: absolute;
+    background-image: url(../../AboutUS/AboutUsIMG/aboutstrl.svg);
+    width: 7px;
+    height: 24px;
+    top: 31px;
+    left: 40px;
+}
+
+.DeliveryTextUp__h1 {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 120%;   
+    padding-bottom: 40px;
+}

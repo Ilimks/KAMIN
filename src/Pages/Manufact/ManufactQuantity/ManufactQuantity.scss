@@ -1,0 +1,100 @@
+.ManufactQuantity {
+    padding-bottom: 72px;
+}
+
+.ManufactQuantity__box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.ManufactQuantity__box1,
+.ManufactQuantity__box2,
+.ManufactQuantity__box3,
+.ManufactQuantity__box4 {
+    border: 2px solid #EFF0F2;
+    border-radius: 24px;
+    padding: 24px;
+    width: 628px;
+    height: auto;    
+}
+
+.ManufactQuantity__box1__name,
+.ManufactQuantity__box2__name,
+.ManufactQuantity__box3__name,
+.ManufactQuantity__box4__name {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+}
+
+.ManufactQuantity__box1__a, 
+.ManufactQuantity__box1__f, 
+.ManufactQuantity__box1__h, 
+.ManufactQuantity__box1__m {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding-top: 24px;
+}
+
+.ManufactQuantity__box1__a1,
+.ManufactQuantity__box1__a2,
+.ManufactQuantity__box1__a3,
+.ManufactQuantity__box1__a4,
+.ManufactQuantity__box1__f1, 
+.ManufactQuantity__box1__f2, 
+.ManufactQuantity__box1__f3, 
+.ManufactQuantity__box1__f4, 
+.ManufactQuantity__box1__f5, 
+.ManufactQuantity__box1__f6,
+.ManufactQuantity__box1__h1, 
+.ManufactQuantity__box1__h2, 
+.ManufactQuantity__box1__h3, 
+.ManufactQuantity__box1__h4, 
+.ManufactQuantity__box1__h5, 
+.ManufactQuantity__box1__m1,
+.ManufactQuantity__box1__m2,
+.ManufactQuantity__box1__m3,
+.ManufactQuantity__box1__m4,
+.ManufactQuantity__box1__m5,
+.ManufactQuantity__box1__m6 {
+    border: 1px solid #F7752A;
+    border-radius: 16px;
+    padding: 0px 16px;
+    width: auto;
+    height: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.ManufactQuantity__box1__a1 p,
+.ManufactQuantity__box1__a2 p,
+.ManufactQuantity__box1__a3 p,
+.ManufactQuantity__box1__a4 p,
+.ManufactQuantity__box1__f1 p, 
+.ManufactQuantity__box1__f2 p, 
+.ManufactQuantity__box1__f3 p, 
+.ManufactQuantity__box1__f4 p, 
+.ManufactQuantity__box1__f5 p, 
+.ManufactQuantity__box1__f6 p,
+.ManufactQuantity__box1__h1 p, 
+.ManufactQuantity__box1__h2 p, 
+.ManufactQuantity__box1__h3 p, 
+.ManufactQuantity__box1__h4 p, 
+.ManufactQuantity__box1__h5 p, 
+.ManufactQuantity__box1__m1 p,
+.ManufactQuantity__box1__m2 p,
+.ManufactQuantity__box1__m3 p,
+.ManufactQuantity__box1__m4 p,
+.ManufactQuantity__box1__m5 p,
+.ManufactQuantity__box1__m6 p {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #F7752A; 
+    cursor: pointer;   
+}

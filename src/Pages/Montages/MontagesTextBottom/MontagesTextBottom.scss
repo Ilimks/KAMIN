@@ -1,0 +1,44 @@
+.montages__text__bottom__container {
+    max-width: 845px;
+    margin: 0 auto;
+}
+
+.montages__text__bottom__box {
+    padding-bottom: 48px;
+}
+
+.montages__text__bottom__box__kamin__name,
+.montages__text__bottom__box__buy__name {
+    font-weight: 700;
+    font-size: 27px;
+    padding-top: 32px;    
+    padding-bottom: 16px;
+}
+
+.montages__text__bottom__box__text1,
+.montages__text__bottom__box__text2,
+.montages__text__bottom__box__kamin__text,
+.montages__text__bottom__box__buy__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;    
+}
+
+.montages__text__bottom__box__text1 {
+    padding-bottom: 16px;
+}
+
+.montages__text__bottom__box__kamin__text {
+    padding-bottom: 16px;
+}
+
+.montages__text__bottom__box__kamin__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 26px;
+}
+
+.montages__text__bottom__box__kamin__list__li {
+    list-style: disc;
+}

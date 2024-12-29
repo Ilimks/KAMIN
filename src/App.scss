@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Nekst';
+    src: local('Nekst'), local('Nekst-Regular'),
+        url('./Fonts/Nekst-Regular.woff2') format('woff2'),
+        url('./Fonts/Nekst-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Nekst', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.snowfall {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
+}
+  
+.snowflake {
+    position: absolute;
+    top: -10%;
+    color: white;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+  
+@keyframes fall {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(110vh);
+      opacity: 0;
+    }
+}
+
+
+:root {
+    --bg-color: white;
+    --text-color: black;
+}
+  
+[data-theme="dark"] {
+    --bg-color: #645f5f;
+    --text-color: white;
+}
+  
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+input {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+input::placeholder {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+textarea {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+textarea::placeholder {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}

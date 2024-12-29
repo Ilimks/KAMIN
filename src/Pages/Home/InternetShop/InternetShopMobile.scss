@@ -1,0 +1,60 @@
+@media(max-width:900px) {
+    .internet__shop__name {
+        width: 100%;
+        font-weight: 700;
+        font-size: 63px;
+        padding-left: 0;
+    }
+
+    .internet__shop__img {
+        width: 100%;
+        height: auto;
+        padding-left: 0;
+        padding-top: 24px;
+    }
+
+    .internet__shop__text {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .internet__shop__list {
+        padding-left: 0;
+    }
+
+    .internet__shop__text__bottom {
+        padding-left: 0;
+        padding-bottom: 48px;
+    }
+}
+
+@media(max-width:667px) {
+    .internet__shop__name {
+        width: 83%;
+        font-weight: 700;
+        font-size: 32px;
+        padding-left: 0;
+    }
+
+    .internet__shop__img {
+        width: 100%;
+        height: 180px;
+        padding-left: 0;
+        padding-top: 24px;
+    }
+
+    .internet__shop__text {
+        width: 97%;
+        padding-left: 0;
+    }
+
+    .internet__shop__list {
+        padding-left: 0;
+    }
+    
+    .internet__shop__text__bottom {
+        padding-left: 0;
+        padding-bottom: 48px;
+    }
+    
+}

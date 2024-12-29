@@ -1,0 +1,57 @@
+.popular__swiper1__card1__text,
+.popular__swiper1__card2__text,
+.popular__swiper1__card3__text,
+.popular__swiper1__card4__text,
+.popular__swiper1__card5__text,
+.popular__swiper1__card6__text,
+.popular__swiper1__card7__text,
+.popular__swiper1__card8__text {
+    width: 302px;
+    font-weight: 500;
+    line-height: 114%;
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
+}
+
+.popular__swiper1__card1,
+.popular__swiper1__card2,
+.popular__swiper1__card3,
+.popular__swiper1__card4,
+.popular__swiper1__card5,
+.popular__swiper1__card6,
+.popular__swiper1__card7,
+.popular__swiper1__card8 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Расстояние между изображением и текстом */
+}
+  
+.popular__swiper1__card1__img {
+    max-width: 100%; /* Ограничение по ширине контейнера */
+    height: auto; /* Сохраняет пропорции изображения */
+    object-fit: contain; /* Гарантирует, что изображение полностью вписывается в контейнер */
+    display: block; /* Убирает лишние отступы */
+}
+  
+.popular__swiper1__card1__text {
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+}
+
+.popular__swiper1__card1__price,
+.popular__swiper1__card2__price,
+.popular__swiper1__card3__price,
+.popular__swiper1__card4__price,
+.popular__swiper1__card5__price,
+.popular__swiper1__card6__price,
+.popular__swiper1__card7__price,
+.popular__swiper1__card8__price {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #F7752A;    
+}
