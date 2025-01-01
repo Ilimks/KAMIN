@@ -656,3 +656,64 @@
     line-height: 150%;
     padding-left: 27px;    
 }
+
+.basket__box__btns2__order__content__form__in::placeholder {
+    color: #61707D;
+}
+
+.basket__box__btns2__order__content__form__in:nth-child(1) {
+    margin-right: 8px;
+}
+
+.basket__box__btns2__order__content__btn {
+    border-radius: 38px;
+    width: 580px;
+    height: 76px;   
+    background: #F7752A; 
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    border: none;
+    margin-top: 16px;
+    transition: all .3s ease;
+}
+
+.basket__box__btns2__order__content__btn:hover {
+    background-color: #F99155;
+}
+
+.basket__box__bottom__design__btn__check {
+    background-color: #F7752A;
+    border-radius: 38px;
+    border: none;
+    width: 310px;
+    height: 76px;    
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: white;
+    padding-right: 30px;
+    position: relative;
+    transition: all .3s ease;
+}
+
+.basket__box__bottom__design__btn__check:hover {
+    background-color: #F99155;
+}
+
+.basket__box__bottom__design__btn__check::after {
+    content: '';
+    position: absolute;
+    background-image: url(../BasketIMG/design.svg);
+    width: 15px;
+    height: 10px;
+    top: 32px;
+    right: 53px;
+}

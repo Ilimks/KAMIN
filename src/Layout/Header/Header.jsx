@@ -153,7 +153,7 @@ const Header = () => {
                            {BasketCountNumber > 0 && <span className="header__basket__count-cart">{BasketCountNumber}</span>}
                            </div>
                         </Link>
-                        <img className='header__favorites' src={headerBasket2} alt="" />
+                        <Link to='user'><div className="header__user"></div></Link>
                         <div className="toggle__theme__box">
                             <label>
                                 <input

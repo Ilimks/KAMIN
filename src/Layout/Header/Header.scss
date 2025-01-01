@@ -953,3 +953,29 @@
     display: flex;
     column-gap: 16px;  
 }
+
+.header__user {
+    border-radius: 28px;
+    padding: 9px 0px;
+    width: 56px;
+    height: 56px;
+    background-color: #F7752A;    
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.header__user::after {
+    content: '';
+    position: absolute;
+    background-image: url(./HeaderIMG/free-icon-user-456212.png);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    width: 17px; 
+    height: 17px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: invert(100%) brightness(100%)
+}

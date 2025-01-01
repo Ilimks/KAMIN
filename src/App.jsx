@@ -17,6 +17,7 @@ import Delivery from './Pages/Delivery/Delivery';
 import Reviews from './Pages/Reviews/Reviews';
 import Manufact from './Pages/Manufact/Manufact';
 import Single from './Pages/Single/Single';
+import User from './Pages/User/User';
 
 
 
@@ -62,6 +63,7 @@ const App = () => {
                 <Route path='reviews' element={<Reviews/>}/>
                 <Route path='manufact' element={<Manufact/>}/>
                 <Route path='single/:id' element={<Single/>}/>
+                <Route path='user' element={<User/>}/>
 
                 
                 

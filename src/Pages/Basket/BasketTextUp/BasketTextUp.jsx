@@ -13,6 +13,8 @@ const BasketTextUp = () => {
 
     const [design, setDesign] = useState(false)
     const [order, setOrder] = useState(false)
+    const [isChecked, setIsChecked] = useState(false);
+    
 
     const dispatch = useDispatch()
     const basket = useSelector((state) => state.basketSlice.basket );
@@ -20,6 +22,10 @@ const BasketTextUp = () => {
     const PopupCloseOpen = () => {
         setOrder((e)=>!e);
     }
+
+    const handleCheckboxChange = (e) => {
+        setIsChecked(e.target.checked);
+    };
 
     
 
@@ -97,13 +103,14 @@ const BasketTextUp = () => {
                                                     <p className='basket__box__btns2__order__content__text'>Наш специалист перезвонит вам и оформит заказ.</p>
                                                     <form className='basket__box__btns2__order__content__form' action="">
                                                         <label className='basket__box__btns2__order__content__form__label' htmlFor="">
-                                                            <input className='basket__box__btns2__order__content__form__in' type="text" />
+                                                            <input className='basket__box__btns2__order__content__form__in' type="text" placeholder='Ваше имя'/>
                                                         </label>
                                                         <label className='basket__box__btns2__order__content__form__label' htmlFor="">
-                                                            <input className='basket__box__btns2__order__content__form__in' type="number" />
+                                                            <input className='basket__box__btns2__order__content__form__in' type="number" placeholder='Номер телефона'/>
                                                         </label>
+                                                        <button className='basket__box__btns2__order__content__btn'>заказ в 1 клик</button>
                                                     </form>
-                                                    <button className='basket__box__btns2__order__content__btn'>заказ в 1 клик</button>
+                                                    
 
                                                 </div>
                                             </div>
@@ -241,15 +248,15 @@ const BasketTextUp = () => {
                                    </div>
 
                                    <div className="basket__box__conditions">
-                                   <label className="basket__box__conditions__label">
-                                        <input className="basket__box__conditions__input1" type="checkbox" />
+                                    <label className="basket__box__conditions__label">
+                                        <input checked={isChecked} onChange={handleCheckboxChange} className="basket__box__conditions__input1" type="checkbox" />
                                         <span className="custom__checkbox__basket"></span>
                                     </label>
                                        <p className='basket__box__conditions__text'>Я прочитал и согласен с <Link>правилами</Link></p>
                                    </div>
 
                                    <div className="basket__box__bottom__design">
-                                       <button className='basket__box__bottom__design__btn'>Оформить заказ</button>
+                                       <button type="submit" disabled={!isChecked} className={isChecked ? 'basket__box__bottom__design__btn__check' : 'basket__box__bottom__design__btn'}>Оформить заказ</button>
                                    </div>
 
                                 </>
