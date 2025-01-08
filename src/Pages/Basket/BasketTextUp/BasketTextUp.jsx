@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './BasketTextUp.scss'
 import { Link } from 'react-router-dom';
 import BasketToHome from '../../AboutUS/AboutUsIMG/Frame 36.svg'
@@ -8,12 +8,52 @@ import PortfolioSwiper from '../../Home/Portfolio/PortfolioSwiper/PortfolioSwipe
 import minus from '../BasketIMG/Minus.svg'
 import plus from '../BasketIMG/Plus.svg'
 import del from '../BasketIMG/Del.svg'
+import { SpeedDialAction } from '@mui/material';
 
 const BasketTextUp = () => {
 
     const [design, setDesign] = useState(false)
     const [order, setOrder] = useState(false)
     const [isChecked, setIsChecked] = useState(false);
+    const [textInput, setTextInput] = useState(""); 
+    const [selectedRadio, setSelectedRadio] = useState(""); 
+    const [errors, setErrors] = useState({}); 
+    const [orderSuccess, setOrderSuccess] = useState(false); 
+    const [orderDetails, setOrderDetails] = useState(null); 
+
+    const ScrollUp = () => {
+            window.scrollTo(0, 0);
+    }
+
+   
+
+    const validate = () => {
+        const newErrors = {};
+        if (!textInput.trim()) {
+          newErrors.textInput = "Заполните поля";
+        }
+        if (!selectedRadio) {
+          newErrors.selectedRadio = "Выберите один из вариантов";
+        }
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0; 
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    
+        if (validate()) {
+            setOrderSuccess(true);
+            setOrderDetails({ textInput, selectedRadio });
+            setTextInput(""); 
+            setSelectedRadio("");
+            setErrors({});
+          } else {
+            setOrderSuccess(false);
+        }
+
+        ScrollUp()
+    };
     
 
     const dispatch = useDispatch()
@@ -40,6 +80,8 @@ const BasketTextUp = () => {
                         <p className='basket__box__home__name'>Корзина</p>
                     </div>
 
+                    {orderSuccess === false ? (
+                    <>
                     {basket.length > 0 ? (
                         <>
                         <h2 className='basket__box__text1'>Корзина покупок</h2>
@@ -52,7 +94,7 @@ const BasketTextUp = () => {
                                     <div className="basket__box__carts__description">
                                         <h4 className='basket__box__carts__description__title'>{el.title}</h4>
                                         <p className='basket__box__carts__description__code'>Код товара: {el.code}</p>
-                                        <h3 className='basket__box__carts__description__price'>{el.price.toLocaleString('ru-RU')} ₽</h3>
+                                        <h3 className='basket__box__carts__description__price'>{el.price} ₽</h3>
                                     </div>
         
                                     <div className="basket__box__carts__quantity">
@@ -140,11 +182,11 @@ const BasketTextUp = () => {
                                 <>
                                    <div className="basket__box__address">
                                     
-                                        <form className='basket__box__address__inputs' action="">
+                                        <form onSubmit={handleSubmit} className='basket__box__address__inputs' action="">
 
                                             <label htmlFor="">
                                                 <h4 className='basket__box__address__input__name'>Контактные данные</h4>
-                                               <input className='basket__box__address__inputs1' type="text" name="" id="" placeholder='Имя'/>
+                                               <input value={textInput} onChange={(e) => setTextInput(e.target.value)} className='basket__box__address__inputs1' type="text" name="" id="" placeholder='Имя'/>
                                                <input className='basket__box__address__inputs1' type="number" name="" id="" placeholder='Телефон'/>
                                             </label>
 
@@ -153,6 +195,7 @@ const BasketTextUp = () => {
                                                <input className='basket__box__address__inputs1' type="text" name="" id="" placeholder='Город'/>
                                                <input className='basket__box__address__inputs1' type="text" name="" id="" placeholder='Адрес доставки'/>
                                             </label>
+                                            {errors.textInput && <p className='inputs__error' style={{ color: "red" }}>{errors.textInput}</p>}
 
                                         </form>
     
@@ -164,22 +207,29 @@ const BasketTextUp = () => {
 
                                    <div className="basket__box__payment">
 
-                                        <form className='basket__box__payment__inputs' action="">
+                                        <form onSubmit={handleSubmit} className='basket__box__payment__inputs' action="">
 
                                             <h4 className='basket__box__payment__inputs__name'>Способ оплаты</h4>
 
                                             <div className="basket__box__payment__box">
                                                 <label className='basket__box__payment__label' htmlFor="">
-                                                    <input className='basket__box__payment__input1' type="radio" />
+                                                    <input id='cat1__in' className='basket__box__payment__input1' type="radio" name='payment' value="option1" checked={selectedRadio === "option1"} onChange={(e) => setSelectedRadio(e.target.value)}/>
+                                                    <span className="custom__radio"></span>
                                                 </label>
-                                                <p className='basket__box__payment__name'>Наличными</p>
+                                                <label htmlFor="cat1__in">
+                                                    <p className='basket__box__payment__name'>Наличными</p>
+                                                </label>
                                             </div>
 
                                             <div className="basket__box__payment__box">
                                                 <label className='basket__box__payment__label' htmlFor="">
-                                                    <input className='basket__box__payment__input1' type="radio" />
+                                                    <input id='cat2__in' className='basket__box__payment__input1' type="radio" name='payment' value="option2" checked={selectedRadio === "option2"} onChange={(e) => setSelectedRadio(e.target.value)}/>
+                                                    <span className="custom__radio"></span>
                                                 </label>
+                                                <label htmlFor="cat2__in">
                                                 <p className='basket__box__payment__name'>Безналичными</p>
+                                                </label>
+                                                
                                             </div>
 
                                         </form>
@@ -190,40 +240,50 @@ const BasketTextUp = () => {
 
                                             <div className="basket__box__delivery__box1">
                                                 <label className='basket__box__delivery__label' htmlFor="">
-                                                    <input className='basket__box__delivery__input1' type="radio" />
+                                                    <input id='cat3__in' className='basket__box__delivery__input1' type="radio" name='delivery'/>
+                                                    <span className="custom__radio"></span>
                                                 </label>
+                                                <label htmlFor="cat3__in">
                                                 <div className="basket__box__delivery__text1">
                                                     <p className='basket__box__delivery__name'>Доставка по Санкт-Петербургу</p>
                                                     <p className='basket__box__delivery__price'>1000 ₽</p>
                                                 </div>
+                                                </label>
                                             </div>
 
                                             <div className="basket__box__delivery__box2">
                                                 <label className='basket__box__delivery__label' htmlFor="">
-                                                    <input className='basket__box__delivery__input2' type="radio" />
+                                                    <input id='cat4__in' className='basket__box__delivery__input2' type="radio" name='delivery'/>
+                                                    <span className="custom__radio"></span>
                                                 </label>
+
+                                                <label htmlFor="cat4__in">
                                                 <div className="basket__box__delivery__text2">
                                                     <p className='basket__box__delivery__name'>Доставка по Ленинградской области</p>
                                                     <p className='basket__box__delivery__price'>1000 ₽ + 35 ₽ за 1 км от КАД</p>
                                                     <p className='basket__box__delivery__des'>Бесплатно 50 км от КАД - при покупке товара с комплектом дымохода 5 м и сумме заказа 50 000 руб.</p>
                                                 </div>
+                                                </label>
                                             </div>
 
                                             <div className="basket__box__delivery__box3">
 
                                                 <label className='basket__box__delivery__label' htmlFor="">
-                                                    <input className='basket__box__delivery__input3' type="radio" />
+                                                    <input id='cat5__in' className='basket__box__delivery__input3' type="radio" name='delivery'/>
+                                                    <span className="custom__radio"></span>
                                                 </label>
 
+                                                <label htmlFor="cat5__in">
                                                 <div className="basket__box__delivery__text3">
                                                    <p className='basket__box__delivery__name'>Доставка в регионы России</p>
                                                    <p className='basket__box__delivery__price'>1000 ₽ до терминала по СПБ</p>
                                                 </div>
+                                                </label>
 
                                             </div>
-
+                                            
                                         </form>
-
+                                        {errors.selectedRadio && (<p className='inputs__error__radio1' style={{ color: "red" }}>{errors.selectedRadio}</p>)}
                                    </div>
 
                                    <div className="basket__box__description">
@@ -256,7 +316,7 @@ const BasketTextUp = () => {
                                    </div>
 
                                    <div className="basket__box__bottom__design">
-                                       <button type="submit" disabled={!isChecked} className={isChecked ? 'basket__box__bottom__design__btn__check' : 'basket__box__bottom__design__btn'}>Оформить заказ</button>
+                                       <button onClick={handleSubmit} disabled={!isChecked} className={isChecked ? 'basket__box__bottom__design__btn__check' : 'basket__box__bottom__design__btn'}>Оформить заказ</button>
                                    </div>
 
                                 </>
@@ -268,6 +328,68 @@ const BasketTextUp = () => {
                         <p className='basket__box__empty__text'>Корзина пустая. Возвращайтесь в каталог и добавьте товар в корзину.</p>
                         <Link to='/'><button className='basket__box__home__btn'>Продолжить покупки</button></Link>
                       </>
+                    )}
+                    </>
+                    ) : (
+                        <>
+                         <div className='basket__box__accepted'>
+                             <h2 className='basket__box__accepted__name'>Ваш заказ принят!</h2>
+                             <p className='basket__box__accepted__number'>Номер заказа: №2317</p>
+                             
+                             {basket.map((tit) => (
+                             <>
+                              <div className="basket__box__accepted__carts">
+
+                                  <div className="basket__box__accepted__carts__box">
+    
+                                    <img className='basket__box__accepted__carts__img' src={tit.image} alt="" />
+    
+                                    <div className="basket__box__accepted__carts__description">
+                                       <h4 className='basket__box__accepted__carts__description__title'>{tit.title}</h4>
+                                       <p className='basket__box__accepted__carts__description__code'>Код товара: {tit.code}</p>
+                                       <h3 className='basket__box__accepted__carts__description__price'>{tit.price} ₽</h3>
+                                    </div>
+  
+                                  </div>
+
+                                  <div className="basket__box__accepted__carts__count__box">
+  
+                                    <div className="basket__box__accepted__carts__count">
+                                       <p className='basket__box__accepted__carts__count__number'>{tit.count}</p>
+                                    </div>
+                                    <p className='basket__box__accepted__carts__piece'>шт.</p>
+
+                                  </div>
+
+                              </div>
+                             </>
+                            ))}
+
+                            <div className="basket__box__accepted__all">
+                                <p className='basket__box__count__text1'>
+                                    Общая сумма: <span>{basket.reduce((acc,el)=>{
+                                       return acc + el.count * el.price
+                                    },0)} ₽</span>
+                                </p>
+                                <p className='basket__box__count__text2'>без учёта стоимости доставки, разгрузки и монтажа</p>
+                            </div>
+
+                            <div className="basket__box__accepted__call">
+                               <p className='basket__box__accepted__call__text'>Если у Вас возникли вопросы, пожалуйста, <Link>свяжитесь с нами.</Link> Или наш менеджер сам свяжеться с вами в течении дня.</p>
+                               <p className='basket__box__accepted__call__text2'>Спасибо за покупки в нашем интернет-магазине!</p>
+                               <h3 className='basket__box__accepted__call__montage'>Монтаж</h3>
+                               <p className='basket__box__accepted__call__montage__text'>Также мы делаем монтаж «под ключ» по Ленинградской области, с бесплатным выездом на замер. Если вас интересует монтаж, то вы можете <Link>узнать о нём подробнее</Link> или <Link>рассчитать стоимость монтажа.</Link></p>
+                            </div>
+
+                            <Link to="/"><button onClick={()=>dispatch(basketDel())} className='basket__box__accepted__btn'>Главная</button></Link>
+
+
+                             {/* <ul>
+                                 <li>Текст: {orderDetails.textInput}</li>
+                                 <li>Выбранный вариант: {orderDetails.selectedRadio}</li>
+                             </ul> */}
+                            </div>
+                        </>
                     )}
                 </div> 
             </div>

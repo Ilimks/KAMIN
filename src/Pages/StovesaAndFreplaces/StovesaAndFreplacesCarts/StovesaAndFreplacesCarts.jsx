@@ -1,4 +1,4 @@
-import React, { useRef, useState,useEffect } from "react";
+import React, { useState} from "react";
 import "./StovesaAndFreplacesCarts.scss";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
@@ -6,14 +6,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { add } from "../../../Store/BasketSlice/BasketSlice";
 import viewBox1 from "../StovesaAndFreplacesIMG/viewBox1.svg";
 import viewBox2 from "../StovesaAndFreplacesIMG/viewBox2.svg";
-import { Link, useNavigate,useLocation } from "react-router-dom";
+import { Link, useNavigate,} from "react-router-dom";
   
   
   
 const StovesaAndFreplacesCarts = () => {
-
-
-
 
   //-----------------------------------------------------------------------StoreProducts------------------------------------------------------------------
   const products = useSelector((state) => state.productsSlice.data);
@@ -83,6 +80,16 @@ const StovesaAndFreplacesCarts = () => {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentItems = filteredProductsRange.slice(startIndex, endIndex);
+
+
+  const resetFilters = () => {
+    setValue([0, 400000]);
+    setCharacteristics1(false);
+    setCharacteristics2(false);
+    setCharacteristics3(false);
+    setCharacteristics4(false);
+    setCharacteristics5(false);
+  };
 
 
 
@@ -304,7 +311,7 @@ const StovesaAndFreplacesCarts = () => {
                         
                       </div>
         
-                    <button className="stovesa__and__freplaces__carts__aside__btn">Сбросить</button>
+                    <button onClick={resetFilters} className="stovesa__and__freplaces__carts__aside__btn">Сбросить</button>
 
                 </aside>
     

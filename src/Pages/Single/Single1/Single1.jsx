@@ -2,14 +2,12 @@ import React, { useEffect, useState } from 'react';
 import './Single1.scss'
 import { Link, useLocation } from 'react-router-dom';
 import SingleHome from '../../AboutUS/AboutUsIMG/Frame 36.svg'
-import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import SingleKey from '../SingleIMG/SingleKey.svg'
 
 const Single1 = () => {
 
     const location = useLocation()
-    const dispatch = useDispatch()
     const [product, setProduct] = useState({})
   
     useEffect(()=>{

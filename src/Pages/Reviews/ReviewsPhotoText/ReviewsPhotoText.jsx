@@ -1,7 +1,7 @@
 import React from 'react';
 import './ReviewsPhotoText.scss'
 import review1 from '../ReviewsIMG/reviews1.svg'
-import review2 from '../ReviewsIMG/reviews2.svg'
+// import review2 from '../ReviewsIMG/reviews2.svg'
 import review3 from '../ReviewsIMG/reviews3.svg'
 
 const ReviewsPhotoText = () => {

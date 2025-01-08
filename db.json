@@ -2,19 +2,43 @@
   "users": [
     {
       "email": "ilimk9731@gmail.com",
-      "password": "$2a$10$JmuKHn8lMKkUdGUAw3A0xeYtfHQPs795srpnOWS7efuwS3.OQb18K",
-      "name": "Ilim",
+      "password": "$2a$10$DCezSgQ2sCfRhzREfGL58Oj2SIR6xMNGk/gfm1S6Eun6cKaZFkIYK",
+      "name": "Илим",
       "confirmPassword": "ilimk9731",
-      "phone": "+996706030725",
+      "phone": "5983758923759823",
       "id": 1
     },
     {
-      "email": "njbnj@gmail.com",
-      "password": "$2a$10$9KepVisRQ97g/T6tsbZ.3Orn2I7nlwE2Ahmq5tnqo7XYkFr3peknO",
-      "name": "sbcahjsc",
-      "confirmPassword": "ilimk",
-      "phone": "21535153151",
+      "email": "ndjvksdb@gmail.com",
+      "password": "$2a$10$Kq6sWRMJLwdHhi9p7hvAbeYgbCpmtCuAZVqJDk..NlTgi9ZLzakqC",
+      "name": "nvsdklvnsdlk",
+      "confirmPassword": "ilimk9",
+      "phone": "324793275293",
       "id": 2
+    },
+    {
+      "email": "scnaslk@gmail.com",
+      "password": "$2a$10$iy5mW9AqRmJ3LEzzfx5CEeVn8moj05HLXPnLFvGMVk0tqtjjd0PMq",
+      "name": "bcjsdbvcksjd",
+      "confirmPassword": "max67",
+      "phone": "hfkiawhfwafnla",
+      "id": 3
+    },
+    {
+      "email": "rusik@gmail.com",
+      "password": "$2a$10$3iSkeMWKpQWW2WHHiWZBZONTdv2FDsgVuckCC4jAc2iFZDFL8b8KS",
+      "name": "Руслан",
+      "confirmPassword": "rusik",
+      "phone": "egsegessgsfg",
+      "id": 4
+    },
+    {
+      "email": "sacsa@gmail.com",
+      "password": "$2a$10$L9vnwkIFLNz5L8Srts8FxOZG.2UZ90.Ttro1mU7Er0VYJw8MZYdFe",
+      "name": "scasc",
+      "confirmPassword": "casc",
+      "phone": "2414214124",
+      "id": 5
     }
   ],
   "products": [

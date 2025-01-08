@@ -3,9 +3,8 @@ import './Header.scss'
 import './HeaderMobile.scss'
 import { Link, useLocation } from 'react-router-dom';
 import headerLogo from './HeaderIMG/full logo.svg'
+import headerLogo2 from './HeaderIMG/full logo2.svg'
 import headerBasket1 from './HeaderIMG/Корзина.svg'
-import headerBasket2 from './HeaderIMG/Корзина2.svg'
-import headerBasket3 from './HeaderIMG/Корзина3.svg'
 import ScrollIMG1 from './HeaderIMG/ScrollIMG1.svg'
 import ScrollIMG2 from './HeaderIMG/ScrollIMG2.svg'
 import inst from '../Footer/FooterIMG/inst.svg'
@@ -28,7 +27,6 @@ const Header = () => {
     const [OpenNumber, setOpenNumber] = useState(false);
     const [OpenNumber1, setOpenNumber1] = useState(false)
     const [OpenIMG, setOpenIMG] = useState(false)
-    const [OpenKatalogIn, setOpenKatalogIn] = useState(false)
     const [scrolled, setScrolled] = useState(false);
     const [NumberBtnCon, setNumberBtnCon] = useState(false)
     const [visible, setVisible] = useState(false)
@@ -47,10 +45,6 @@ const Header = () => {
 
     const togglePopupKatalog = () => {
         setOpenKatalog((popupRef)=>!popupRef);
-    }
-
-    const togglePopupKatalogIn = () => {
-        setOpenKatalogIn((popupRef)=>!popupRef);
     }
 
     const togglePopupOne = () => {
@@ -92,7 +86,6 @@ const Header = () => {
         setOpenKatalog(false);
         setOpenNumber(false);
         setOpenNumber1(false);
-        setOpenKatalogIn(false);
     }, [location.pathname]);
 
     
@@ -102,13 +95,14 @@ const Header = () => {
             <div className="container">
                 
                 <div className="header__top">
-                    <Link to='/'><img className='header__logo' src={headerLogo} alt="" /></Link>
+                    <Link to='/'><img className={theme !== "dark" ? "header__logo" : "header__logo1"} src={headerLogo} alt="" /></Link>
+                    <Link to='/'><img className={theme === "dark" ? "header__log_dark" : "header__log_dark1"} src={headerLogo2} alt="" /></Link>
                     {scrolled && (
                         <div className="header__top__katalog__scroll">
                             <img className='header__top__katalog__scroll__img1' src={ScrollIMG1} alt="" />
                             {OpenIMG ? <img onClick={togglePopupIMG} className='header__top__katalog__scroll__img2' src={ScrollIMG2} alt="" />:<img onClick={togglePopupIMG} className='header__top__katalog__scroll__img2' src={ScrollIMG2} alt="" /> }
                             {OpenIMG && (
-                                <div className="header__top__katalog__scroll__img2__popup" >
+                                <div className={theme === "dark" ? "header__top__katalog__scroll__img2__popup_dark" : "header__top__katalog__scroll__img2__popup"} >
                                     <ul className='header__top__katalog__scroll__img2__popup__nav'>
                                         <li className='header__top__katalog__scroll__img2__popup__nav__li'><Link>Дымоходы</Link></li>
                                         <li className='header__top__katalog__scroll__img2__popup__nav__li'><Link to='montages'>Монтаж</Link></li>
@@ -181,7 +175,7 @@ const Header = () => {
                                 {OpenNumber ? '+7 (812) 924-66-61' : '+7 (812) 924-66-61'}
                             </p>
                             {OpenNumber && (
-                                <div className="header__bottom__number__popup-box">
+                                <div className={theme === "dark" ? "header__bottom__number__popup-box_dark" : "header__bottom__number__popup-box"}>
                                     <div className="header__bottom__number__popup-box__adress">
                                         <p className='header__bottom__number__popup-box__adress__text'>Адрес магазина</p>
                                         <p className='header__bottom__number__popup-box__adress__city'>г. Санкт-Петербург, ул. Ленсовета, 43</p>
@@ -201,7 +195,7 @@ const Header = () => {
                                     {NumberBtnCon && (
                                         <div className="header__bottom__number__popup-box__btn__box">
                                             <div className="header__bottom__number__popup-box__btn__box__close" onClick={togglePopupNumBtn}></div>
-                                            <div className="header__bottom__number__popup-box__btn__box__content">
+                                            <div className={theme === "dark" ? "header__bottom__number__popup-box__btn__box__content_dark" : "header__bottom__number__popup-box__btn__box__content"}>
                                                 <h3 className='header__bottom__number__popup-box__btn__box__content__name'>Консультируем и подбираем оборудование</h3>
                                                 <p className='header__bottom__number__popup-box__btn__box__content__text'>Наш специалист по товару задаст вам несколько вопросов и предложит подходящие варианты.</p>
                                                 <form className='header__bottom__number__popup-box__btn__box__content__form' action="">
@@ -233,45 +227,11 @@ const Header = () => {
                            <h4 className='header__bottom__katalog__text'>Каталог</h4>
                        </div>
                        {Openkatalog && (
-                           <div  className="header__bottom__katalog__box">
+                           <div  className={theme === "dark" ? "header__bottom__katalog__box_dark" : "header__bottom__katalog__box"}>
                                <ul className='header__bottom__katalog__box__nav'>
-                                   <li onClick={togglePopupKatalogIn}  className='header__bottom__katalog__box__nav__1'>Печи для бани</li>
-                                   {OpenKatalogIn && (
-                                       <div  className="header__bottom__katalog__box__nav__1__box2">
-                                           <h3 className='header__bottom__katalog__box__nav__1__box2__name'>перейти в категорию</h3>
-                                           <div className="header__bottom__katalog__box__nav__1__box2__line"></div>
-                                            <div className="header__bottom__katalog__box__nav__1__box2__types">
-                                                <div className="header__bottom__katalog__box__nav__1__box2__type1">
-                                                
-                                                   <h3 className='header__bottom__katalog__box__nav__1__box2__type1__type'>Тип</h3>
-                                                   
-                                                   <ul className='header__bottom__katalog__box__nav__1__box2__type1__nav'>
-                                                      <li className='header__bottom__katalog__box__nav__1__box2__type1__nav__li1'>Чугунные</li>
-                                                      <li className='header__bottom__katalog__box__nav__1__box2__type1__nav__li2'>Стальные</li>
-                                                      <li className='header__bottom__katalog__box__nav__1__box2__type1__nav__li3'>С баком для воды</li>
-                                                      <li className='header__bottom__katalog__box__nav__1__box2__type1__nav__li4'>С теплообменником</li>
-                                                      <li className='header__bottom__katalog__box__nav__1__box2__type1__nav__li5'>С закрытой каменкой</li>
-                                                      <li className='header__bottom__katalog__box__nav__1__box2__type1__nav__li6'>С открытой каменкой</li>
-                                                      <li className='header__bottom__katalog__box__nav__1__box2__type1__nav__li7'>С выносной топкой</li>
-                                                      <li className='header__bottom__katalog__box__nav__1__box2__type1__nav__li8'>Без выносной топки</li>
-                                                   </ul>
-
-                                                </div>
-                                               <div className="header__bottom__katalog__box__nav__1__box2__type2">
-
-                                                   <h3 className='header__bottom__katalog__box__nav__1__box2__type2__type'>Топливо</h3>
-
-                                                   <ul className='header__bottom__katalog__box__nav__1__box2__type2__nav'>
-                                                       <li className='header__bottom__katalog__box__nav__1__box2__type2__nav__li1'>Дровянные</li>
-                                                       <li className='header__bottom__katalog__box__nav__1__box2__type2__nav__li2'>Эликстрически</li>
-                                                       <li className='header__bottom__katalog__box__nav__1__box2__type2__nav__li3'>Газовые</li>
-                                                   </ul>
-                                               </div>
-                                            </div>
-                                       </div>
-                                   )}
+                                   <li className='header__bottom__katalog__box__nav__1'>Печи для бани</li>
                                    <li className='header__bottom__katalog__box__nav__2'>Печи для дачи</li>
-                                   <li className='header__bottom__katalog__box__nav__3'>Печи-камины</li>
+                                   <li className='header__bottom__katalog__box__nav__3'><Link to='StovesaAndFreplaces'>Печи-камины</Link></li>
                                    <li className='header__bottom__katalog__box__nav__4'>Котлы</li>
                                    <li className='header__bottom__katalog__box__nav__5'>Камины</li>
                                    <li className='header__bottom__katalog__box__nav__6'>Каминные топки</li>
@@ -292,7 +252,7 @@ const Header = () => {
                        <p onClick={togglePopupOne} className='header__bottom__number'>{OpenNumber1  ? '+7 (812) 924-66-61' : '+7 (812) 924-66-61'}</p>
                        <>
                          {OpenNumber1 && (
-                            <div className="header__bottom__number__popup-box2">
+                            <div className={theme === "dark" ? "header__bottom__number__popup-box2_dark" : "header__bottom__number__popup-box2"}>
                                 <div className="header__bottom__number__popup-box__adress">
                                     <p className='header__bottom__number__popup-box__adress__text'>Адрес магазина</p>
                                     <p className='header__bottom__number__popup-box__adress__city'>г. Санкт-Петербург, ул. Ленсовета, 43</p>
@@ -312,7 +272,7 @@ const Header = () => {
                                 {NumberBtnCon && (
                                     <div className="header__bottom__number__popup-box__btn__box">
                                         <div className="header__bottom__number__popup-box__btn__box__close" onClick={togglePopupNumBtn}></div>
-                                        <div className="header__bottom__number__popup-box__btn__box__content">
+                                        <div className={theme === "dark" ? "header__bottom__number__popup-box__btn__box__content_dark" : "header__bottom__number__popup-box__btn__box__content"}>
                                             <h3 className='header__bottom__number__popup-box__btn__box__content__name'>Консультируем и подбираем оборудование</h3>
                                             <p className='header__bottom__number__popup-box__btn__box__content__text'>Наш специалист по товару задаст вам несколько вопросов и предложит подходящие варианты.</p>
                                             <form className='header__bottom__number__popup-box__btn__box__content__form' action="">

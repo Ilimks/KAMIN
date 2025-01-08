@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './UserReg.scss'
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import closeEye from '../UserIMG/eye-password-hide.svg'
+import openEye from '../UserIMG/eye-password-show (1).svg'
+import { ThemeContext } from "../../../Theme/ThemeContext"
+
 
 
 
@@ -9,29 +13,55 @@ const UserReg = () => {
 
     const [reg, setReg] = useState(false)
     const [rememberMe, setRememberMe] = useState(false);
-    const [user, setUser] = useState(null); // Данные авторизованного пользователя
+    const [user, setUser] = useState(null); 
+    const [password,setPassword] = useState(false)
+    const [password1,setPassword1] = useState(false)
+    const [password2,setPassword2] = useState(false) 
+    const { theme, toggleTheme } = useContext(ThemeContext);
     let navigate = useNavigate()
 
 
-    useEffect(() => {
-        const savedUser = JSON.parse(localStorage.getItem("user"));
-        if (savedUser) setUser(savedUser);
-    }, []);
+    let handlePassword = ()=>{
+      setPassword(!password)
+    }
 
-    const login = (e) => {
+    let handlePassword1 = ()=>{
+      setPassword1(!password1)
+    }
+
+    let handlePassword2 = ()=>{
+      setPassword2(!password2)
+    }
+
+
+
+    useEffect(() => {
+      const savedData = JSON.parse(localStorage.getItem("user"));
+      console.log("Данные localStorage:", savedData);
+  
+      if (savedData && savedData.user) {
+          setUser(savedData.user); 
+      } else {
+          setUser(null); 
+      }
+    }, []);
+  
+    const Login = (e) => {
         e.preventDefault();
         let user = {
           email: e.target[0].value,
           password: e.target[1].value,
         };
+        console.log(user)
     
         axios
-          .post("http://localhost:3000/users", user) // Проверь, что API на 3000 порту поддерживает POST-запрос для входа
+          .post("http://localhost:3000/login", user)
           .then(({ data }) => {
-            // Сохраняем данные пользователя в localStorage
+            console.log(data);
+            
             localStorage.setItem("user", JSON.stringify(data));
-            setUser(data);
-            navigate("/"); // Редирект на главную
+            setUser(data.user);
+            navigate("/"); 
           })
           .catch((err) => {
             console.error(err);
@@ -39,7 +69,7 @@ const UserReg = () => {
           });
     };
 
-    const register = (e) => {
+    const Register = (e) => {
         e.preventDefault();
         let newUser = {
           name: e.target[0].value,
@@ -49,19 +79,19 @@ const UserReg = () => {
           phone: e.target[4].value,
         };
     
-        // Проверяем совпадение паролей
+        
         if (newUser.password !== newUser.confirmPassword) {
           alert("Пароли не совпадают!");
           return;
         }
     
         axios
-          .post("http://localhost:3000/users", newUser)
+          .post("http://localhost:3000/register", newUser)
           .then(({ data }) => {
             localStorage.setItem("user", JSON.stringify(data));
-            setUser(data);
+            setUser(data.user);
             alert("Регистрация успешна!");
-            navigate("/"); // Редирект на главную
+            navigate("/"); 
           })
           .catch((err) => {
             console.error(err);
@@ -72,45 +102,77 @@ const UserReg = () => {
     const logout = () => {
         localStorage.removeItem("user");
         setUser(null);
-        navigate("/user"); // Перенаправление на страницу логина
+        localStorage.removeItem('user');
+        navigate("/user"); 
     };
-
+    console.log("Saved user in localStorage:", localStorage.getItem("user"));
     
 
 
     return (
         <section className='UserReg'>
             <div className="UserReg__container">
-
-                {/* Если пользователь авторизован */}
+            {console.log("Текущее состояние user:", user)}
                 {user ? (
-                  <div>
-                    <h2>Добро пожаловать, {user.name}!</h2>
-                    <p>Email: {user.email}</p>
-                    <p>Телефон: {user.phone}</p>
-                    <button onClick={logout} className="UserReg__box__btn">
-                      Выйти
-                    </button>
+                <div className="container">
+
+                  <h2 className='user__entered__name'>Добро пожаловать, {user.name}!</h2>
+                  <p className='user__entered__my'>Мой профиль</p>
+
+                  <div className='user__entered'>
+
+                    <div className="user__entered__text1">
+                      <p className='user__entered__email__text'>Имя:</p>
+                      <p className='user__entered__email'>{user.name}</p>
+                    </div>
+
+                    <div className="user__entered__line"></div>
+
+                    <div className="user__entered__text2">
+                      <p className='user__entered__email__text'>Фамилия:</p>
+                      <p className='user__entered__email'>{user.name}</p>
+                    </div>
+
+                    <div className="user__entered__line"></div>
+
+                    <div className="user__entered__text3">
+                      <p className='user__entered__email__text'>Email:</p>
+                      <p className='user__entered__email'>{user.email}</p>
+                    </div>
+
+                    <div className="user__entered__line"></div>
+
+                    <div className="user__entered__text4">
+                      <p className='user__entered__phone__text'>Телефон:</p>
+                      <p className='user__entered__phone'>{user.phone}</p>
+                    </div>
+
+                    <div className="user__entered__line"></div>
+                    
+                    <button onClick={logout} className="user__entered__btn">Выйти</button>
+
                   </div>
+                </div>
                 ) : reg === false ? (
                 <>
                     <h2 className='UserReg__name'>Логин</h2>
     
                     <div className="UserReg__box">
-                        <form onSubmit={(e)=>login(e)} action="">
+                        <form onSubmit={(e)=>Login(e)} action="">
     
                             <div className="UserReg__box__email">
                                 <h4 className='UserReg__box__email__name'>Email</h4>
                                 <label htmlFor="">
-                                   <input className='UserReg__box__email__input' type="email"  />
+                                   <input className={theme === "dark" ? 'UserReg__box__email__input_dark' : 'UserReg__box__email__input'} type="email"  />
                                 </label>
                             </div>
     
                             <div className="UserReg__box__password">
                                 <h4 className='UserReg__box__password__name'>Пароль</h4>
                                 <label htmlFor="">
-                                   <input className='UserReg__box__password__input' type="password"  />
+                                   <input className={theme === "dark" ? 'UserReg__box__password__input_dark' : 'UserReg__box__password__input'} type={password?"text":"password"}  />
                                 </label>
+                                {password?<img className='UserReg__input__password__open' src={openEye} alt="" onClick={handlePassword}/>:<img className='UserReg__input__password__close' src={closeEye} alt="" onClick={(handlePassword)}/>}
                             </div>
     
                             <div className="UserReg__box__checkBox">
@@ -133,40 +195,46 @@ const UserReg = () => {
                     <>
                            <h2 className="UserReg__name">Регистрация</h2>
                            <div className="UserReg__box">
-                              <form onSubmit={(e) => register(e)} action="">
+                              <form onSubmit={(e) => Register(e)} action="">
 
-                                <div className='UserReg__box__reg1'>
-                                  <h4 className='UserReg__box__reg1__name'>Имя</h4>
-                                  <label htmlFor="">
-                                    <input className='UserReg__box__input__reg__name' type="text" />
-                                  </label>
-                                </div>
+                                  <div className='UserReg__box__reg1'>
+                                    <h4 className='UserReg__box__reg1__name'>Имя</h4>
+                                    <label htmlFor="">
+                                      <input 
+                                          className={theme === "dark" ? 'UserReg__box__input__reg__name_dark' : 'UserReg__box__input__reg__name'}
+                                          type="text"
+                                        />
+                                      
+                                    </label>
+                                  </div>
 
                                 <div className='UserReg__box__reg2'>
                                   <h4 className='UserReg__box__reg2__name'>Пароль</h4>
                                   <label htmlFor="">
-                                    <input className='UserReg__box__input__reg__password1' type="password" />
+                                    <input className={theme === "dark" ? 'UserReg__box__input__reg__password1_dark' : 'UserReg__box__input__reg__password1'} type={password1?"text":"password"} />
                                   </label>
+                                  {password1?<img className='UserReg__input__password__open' src={openEye} alt="" onClick={handlePassword1}/>:<img className='UserReg__input__password__close' src={closeEye} alt="" onClick={(handlePassword1)}/>}
                                 </div>
 
                                 <div className='UserReg__box__reg3'>
                                   <h4 className='UserReg__box__reg3__name'>Подтвердите пароль</h4>
                                   <label htmlFor="">
-                                    <input className='UserReg__box__input__reg__password2' type="password" />
+                                    <input className={theme === "dark" ? 'UserReg__box__input__reg__password2_dark' : 'UserReg__box__input__reg__password2'} type={password2?"text":"password"} />
                                   </label>
+                                  {password2?<img className='UserReg__input__password__open' src={openEye} alt="" onClick={handlePassword2}/>:<img className='UserReg__input__password__close' src={closeEye} alt="" onClick={(handlePassword2)}/>}
                                 </div>
 
                                 <div className='UserReg__box__reg4'>
                                   <h4 className='UserReg__box__reg4__name'>Email</h4>
                                   <label htmlFor="">
-                                    <input className='UserReg__box__input__reg__email' type="email" />
+                                    <input className={theme === "dark" ? 'UserReg__box__input__reg__email_dark' : 'UserReg__box__input__reg__email'} type="email" />
                                   </label>
                                 </div>
 
                                 <div className='UserReg__box__reg5'>
                                   <h4 className='UserReg__box__reg5__name'>Телефон</h4>
                                   <label htmlFor="">
-                                    <input className='UserReg__box__input__reg__phone' type="text" />
+                                    <input className={theme === "dark" ? 'UserReg__box__input__reg__phone_dark' : 'UserReg__box__input__reg__phone'} type="text" />
                                   </label>
                                 </div>
 
