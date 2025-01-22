@@ -20,7 +20,7 @@ const Footer = () => {
                             <li className='footer__left__nav__li'><Link to="/about">О нас</Link></li>
                             <li className='footer__left__nav__li'><Link to='delivery'>Доставка и оплата</Link></li>
                             <li className='footer__left__nav__li'><Link to="manufact">Производители</Link></li>
-                            <li className='footer__left__nav__li'><Link>Акции</Link></li>
+                            <li className='footer__left__nav__li'><Link to='policy'>Политика конфиденциальности</Link></li>
                             <li className='footer__left__nav__li'><Link>Карта сайта</Link></li>
                         </ul>
                     </div>

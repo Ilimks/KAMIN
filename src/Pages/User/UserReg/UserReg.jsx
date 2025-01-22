@@ -128,13 +128,6 @@ const UserReg = () => {
 
                     <div className="user__entered__line"></div>
 
-                    <div className="user__entered__text2">
-                      <p className='user__entered__email__text'>Фамилия:</p>
-                      <p className='user__entered__email'>{user.name}</p>
-                    </div>
-
-                    <div className="user__entered__line"></div>
-
                     <div className="user__entered__text3">
                       <p className='user__entered__email__text'>Email:</p>
                       <p className='user__entered__email'>{user.email}</p>

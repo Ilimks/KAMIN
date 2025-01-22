@@ -1,0 +1,53 @@
+.PolicyTextUp {
+    margin-top: 144px;
+    margin-bottom: 48px;
+}
+
+.PolicyTextUp__box__home {
+    display: flex;
+    column-gap: 39px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
+}
+
+.PolicyTextUp__box__home__name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    color: #61707D;   
+    padding-top: 4px;
+}
+
+.PolicyTextUp__box__home__name::before {
+    content: '';
+    position: absolute;
+    background-image: url(../../AboutUS/AboutUsIMG/aboutstrl.svg);
+    width: 7px;
+    height: 24px;
+    top: 31px;
+    left: 40px;
+}
+
+.PolicyTextUp__h1 {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 120%;
+    padding-bottom: 40px;       
+}
+
+.PolicyTextUp__text,
+.PolicyTextUp__text__des1,
+.PolicyTextUp__text__des2,
+.PolicyTextUp__text__des3,
+.PolicyTextUp__text__des4,
+.PolicyTextUp__text__des1__in1,
+.PolicyTextUp__text__des2__in1,
+.PolicyTextUp__text__des3__in1,
+.PolicyTextUp__text__des4__in1 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    padding-bottom: 24px;
+}
+

@@ -18,6 +18,7 @@ import Reviews from './Pages/Reviews/Reviews';
 import Manufact from './Pages/Manufact/Manufact';
 import Single from './Pages/Single/Single';
 import User from './Pages/User/User';
+import Policy from './Pages/Policy/Policy';
 
 
 
@@ -64,6 +65,7 @@ const App = () => {
                 <Route path='manufact' element={<Manufact/>}/>
                 <Route path='single/:id' element={<Single/>}/>
                 <Route path='user' element={<User/>}/>
+                <Route path='policy' element={<Policy/>}/>
 
                 
                 

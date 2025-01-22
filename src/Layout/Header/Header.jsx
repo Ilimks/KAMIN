@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './Header.scss'
 import './HeaderMobile.scss'
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import headerLogo from './HeaderIMG/full logo.svg'
 import headerLogo2 from './HeaderIMG/full logo2.svg'
 import headerBasket1 from './HeaderIMG/Корзина.svg'
@@ -22,6 +22,7 @@ const Header = () => {
     const search = useSelector(state=>state.productsSlice.search);
     const dispatch = useDispatch()
     const { theme, toggleTheme } = useContext(ThemeContext);
+    const navigate = useNavigate()
 
     const [Openkatalog, setOpenKatalog] = useState(false)
     const [OpenNumber, setOpenNumber] = useState(false);
@@ -86,6 +87,7 @@ const Header = () => {
         setOpenKatalog(false);
         setOpenNumber(false);
         setOpenNumber1(false);
+        setVisible(false)
     }, [location.pathname]);
 
     
@@ -129,7 +131,7 @@ const Header = () => {
                             {visible?
                                 <div className={`header__searchBox ${scrolled ? 'header__searchBox__scroll' : ''}`}>
                                     {search.map((el)=>(
-                                        <div className= {theme === "dark" ? 'search__cart__dark' : 'search__cart'}>
+                                        <div onClick={() => navigate(`/single/${el.id}`)} className= {theme === "dark" ? 'search__cart__dark' : 'search__cart'}>
                                             <img className='search__cart__img' src={el.image} alt=""/>
                                             <div className="search__cart__text">
                                                <p className='search__cart__title'>{el.title}</p>

@@ -4,16 +4,28 @@ import { Link, useLocation } from 'react-router-dom';
 import SingleHome from '../../AboutUS/AboutUsIMG/Frame 36.svg'
 import axios from 'axios';
 import SingleKey from '../SingleIMG/SingleKey.svg'
+import { useDispatch } from 'react-redux';
+import { add } from '../../../Store/BasketSlice/BasketSlice';
 
 const Single1 = () => {
 
     const location = useLocation()
     const [product, setProduct] = useState({})
+    const dispatch = useDispatch();
+    const [basketShowAdd, setBasketShowAdd] = useState(false)
   
     useEffect(()=>{
         axios(`http://localhost:3000/products/${location.pathname.replace('/single/','')}`)
         .then(({data})=>setProduct(data))
     },[])
+
+    const ShowBasketAdd = () => {
+        setBasketShowAdd(true)
+        
+        setTimeout(() => {
+          setBasketShowAdd(false);
+        },5000);
+    }
  
  
     const characteristics = [
@@ -63,7 +75,12 @@ const Single1 = () => {
                                         <p className='single1__box__cart__price__old'>{product.oldPrice}</p>
                                         <h3 className='single1__box__cart__price__new'>{product.price} ₽</h3>
                                     </div>
-                                    <button className='single1__btn'>В КОРЗИНУ</button>
+                                    <button onClick={()=>{
+                                        dispatch(add({...product, count: 1 }));
+                                        ShowBasketAdd()
+                                    }}
+                                        className='single1__btn'>В КОРЗИНУ</button>
+                                        
                                 </div>
                                 <div className="single1__box__cart__right__key">
                                     <div className="single1__box__cart__right__key__ni">
@@ -93,6 +110,11 @@ const Single1 = () => {
                             </div>
 
 
+                        </div>
+
+                        <div style={{opacity:`${basketShowAdd? 1: 0}`}} className={`show__basket__add ${basketShowAdd ? 'basketshow' : ''}`}>
+                          <p className="show__basket__add__text">Товар добавлен в корзину</p>
+                          <Link to='/basket'><button className="show__basket__add__btn">Корзина</button></Link>
                         </div>
 
                     </div>
